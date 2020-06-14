@@ -60,7 +60,7 @@ class Aws:
                 ]
             )
         except ClientError as err:
-            print("Failed authorize ingress.\n" + str(err))
+            print("Failed revoke.\n" + str(err))
             return False
 
         print(response)
