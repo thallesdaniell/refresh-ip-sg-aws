@@ -22,9 +22,9 @@ class Aws:
                 DryRun=False,
                 IpPermissions=[
                     {
-                        'FromPort': 3306,
-                        'ToPort': 3306,
-                        'IpProtocol': "tcp",
+                        'FromPort': 0,
+                        'ToPort': 65535,
+                        'IpProtocol': "-1",
                         'IpRanges': [
                             {
                                 'CidrIp': external_ip+"/32",
@@ -47,9 +47,9 @@ class Aws:
                 DryRun=False,
                 IpPermissions=[
                     {
-                        'FromPort': 3306,
-                        'ToPort': 3306,
-                        'IpProtocol': "tcp",
+                        'FromPort': 0,
+                        'ToPort': 65535,
+                        'IpProtocol': "-1",
                         'IpRanges': [
                             {
                                 'CidrIp': external_ip,
