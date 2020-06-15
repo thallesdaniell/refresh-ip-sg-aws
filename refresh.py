@@ -81,8 +81,10 @@ class Aws:
                                 self.revoke_ip(
                                     sgs, iprange['CidrIp'], description)
                                 self.authorize_ip(sgs, externalip, description)
-                            else:
-                                self.authorize_ip(sgs, externalip, description)
+                                return True
+                else:
+                    print(externalip)
+                    self.authorize_ip(sgs, externalip, description)
 
         except ClientError as e:
             print(e)
