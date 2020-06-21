@@ -68,7 +68,7 @@ class Aws:
 
     def refresh_ip(self, securities_groups,  description):
         try:
-            externalip = get('https://ident.me').text
+            externalip = get('https://v4.ident.me').text
 
             for sgs in securities_groups:
                 ec2 = self.securityGroup(sgs)
